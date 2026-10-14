@@ -25,6 +25,7 @@ truth = "1.1.3"
 robolectric = "4.16"
 androidxTestCore = "1.7.0"
 androidxTestExtJunit = "1.3.0"
+mockk = "1.13.13"
 
 [libraries]
 # convention plugin
@@ -91,6 +92,7 @@ truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
 androidx-test-core = { group = "androidx.test", name = "core-ktx", version.ref = "androidxTestCore" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidxTestExtJunit" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

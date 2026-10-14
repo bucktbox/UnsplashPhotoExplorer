@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -11,6 +12,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
@@ -21,7 +23,17 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "UnsplashPhotoExplorer"
-include(":app")
+include(
+    ":app",
+    ":ui",
+    ":presentation",
+    ":domain",
+    ":data",
+    ":remote",
+    ":local",
+    ":data-resource",
+    ":component",
+)
  
