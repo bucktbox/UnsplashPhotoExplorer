@@ -1,4 +1,4 @@
-package dto
+package com.kyeongilhan.photoexplorer.remote.dto
 
 
 import kotlinx.serialization.SerialName
