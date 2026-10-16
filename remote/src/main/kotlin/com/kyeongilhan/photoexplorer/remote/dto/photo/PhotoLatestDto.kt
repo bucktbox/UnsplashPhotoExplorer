@@ -1,14 +1,15 @@
-package com.kyeongilhan.photoexplorer.remote.dto
+package com.kyeongilhan.photoexplorer.remote.dto.photo
 
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+@Serializable
 class PhotoLatestDto : ArrayList<PhotoLatestDto.PhotoLatestDtoItem>(){
     @Serializable
     data class PhotoLatestDtoItem(
         @SerialName("id")
-        val id: String?,
+        val id: String,
         @SerialName("alternative_slugs")
         val alternativeSlugs: AlternativeSlugs?,
         @SerialName("created_at")
@@ -27,18 +28,18 @@ class PhotoLatestDto : ArrayList<PhotoLatestDto.PhotoLatestDtoItem>(){
         val blurHash: String?,
         @SerialName("description")
         val description: String?,
-        @SerialName("breadcrumbs")
-        val breadcrumbs: List<Any?>?,
+        //@SerialName("breadcrumbs")
+        //val breadcrumbs: List<Any?>?,
         @SerialName("urls")
-        val urls: Urls?,
+        val urls: Urls,
         @SerialName("likes")
         val likes: Int?,
         @SerialName("liked_by_user")
         val likedByUser: Boolean?,
         @SerialName("bookmarked")
         val bookmarked: Boolean?,
-        @SerialName("current_user_collections")
-        val currentUserCollections: List<Any?>?,
+        //@SerialName("current_user_collections")
+        //val currentUserCollections: List<Any?>?,
         @SerialName("sponsorship")
         val sponsorship: Sponsorship?,
         @SerialName("topic_submissions")
@@ -83,7 +84,7 @@ class PhotoLatestDto : ArrayList<PhotoLatestDto.PhotoLatestDtoItem>(){
         @Serializable
         data class Urls(
             @SerialName("raw")
-            val raw: String?,
+            val raw: String,
             @SerialName("full")
             val full: String?,
             @SerialName("regular")
@@ -98,8 +99,8 @@ class PhotoLatestDto : ArrayList<PhotoLatestDto.PhotoLatestDtoItem>(){
     
         @Serializable
         data class Sponsorship(
-            @SerialName("impression_urls")
-            val impressionUrls: List<Any?>?,
+            //@SerialName("impression_urls")
+            //val impressionUrls: List<Any?>?,
             @SerialName("tagline")
             val tagline: String?,
             @SerialName("tagline_url")
@@ -114,21 +115,21 @@ class PhotoLatestDto : ArrayList<PhotoLatestDto.PhotoLatestDtoItem>(){
                 @SerialName("updated_at")
                 val updatedAt: String?,
                 @SerialName("username")
-                val username: String?,
+                val username: String,
                 @SerialName("name")
                 val name: String?,
                 @SerialName("first_name")
                 val firstName: String?,
                 @SerialName("last_name")
-                val lastName: Any?,
-                @SerialName("twitter_username")
-                val twitterUsername: Any?,
+                val lastName: String?,
+                //@SerialName("twitter_username")
+                //val twitterUsername: Any?,
                 @SerialName("portfolio_url")
                 val portfolioUrl: String?,
                 @SerialName("bio")
                 val bio: String?,
                 @SerialName("location")
-                val location: Any?,
+                val location: String?,
                 @SerialName("links")
                 val links: Links?,
                 @SerialName("profile_image")
@@ -186,10 +187,10 @@ class PhotoLatestDto : ArrayList<PhotoLatestDto.PhotoLatestDtoItem>(){
                     val instagramUsername: String?,
                     @SerialName("portfolio_url")
                     val portfolioUrl: String?,
-                    @SerialName("twitter_username")
-                    val twitterUsername: Any?,
-                    @SerialName("paypal_email")
-                    val paypalEmail: Any?
+                    //@SerialName("twitter_username")
+                    //val twitterUsername: Any?,
+                    //@SerialName("paypal_email")
+                    //val paypalEmail: Any?
                 )
             }
         }
@@ -215,7 +216,7 @@ class PhotoLatestDto : ArrayList<PhotoLatestDto.PhotoLatestDtoItem>(){
             @SerialName("download")
             val download: String?,
             @SerialName("download_location")
-            val downloadLocation: String?
+            val downloadLocation: String
         )
     
         @Serializable
@@ -299,8 +300,8 @@ class PhotoLatestDto : ArrayList<PhotoLatestDto.PhotoLatestDtoItem>(){
                 val portfolioUrl: String?,
                 @SerialName("twitter_username")
                 val twitterUsername: String?,
-                @SerialName("paypal_email")
-                val paypalEmail: Any?
+                //@SerialName("paypal_email")
+                //val paypalEmail: Any?
             )
         }
     }

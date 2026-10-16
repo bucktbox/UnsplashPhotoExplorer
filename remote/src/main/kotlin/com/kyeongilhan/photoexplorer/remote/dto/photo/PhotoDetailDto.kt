@@ -1,4 +1,4 @@
-package com.kyeongilhan.photoexplorer.remote.dto
+package com.kyeongilhan.photoexplorer.remote.dto.photo
 
 
 import kotlinx.serialization.SerialName
@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class PhotoDetailDto(
     @SerialName("id")
-    val id: String?,
+    val id: String,
     @SerialName("alternative_slugs")
     val alternativeSlugs: AlternativeSlugs?,
     @SerialName("created_at")
@@ -17,27 +17,27 @@ data class PhotoDetailDto(
     @SerialName("promoted_at")
     val promotedAt: Any?,
     @SerialName("width")
-    val width: Int?,
+    val width: Int,
     @SerialName("height")
-    val height: Int?,
+    val height: Int,
     @SerialName("color")
     val color: String?,
     @SerialName("blur_hash")
     val blurHash: String?,
     @SerialName("description")
     val description: String?,
-    @SerialName("breadcrumbs")
-    val breadcrumbs: List<Any?>?,
+    //@SerialName("breadcrumbs")
+    //val breadcrumbs: List<Any?>?,
     @SerialName("urls")
-    val urls: Urls?,
+    val urls: Urls,
     @SerialName("likes")
     val likes: Int?,
     @SerialName("liked_by_user")
     val likedByUser: Boolean?,
     @SerialName("bookmarked")
     val bookmarked: Boolean?,
-    @SerialName("current_user_collections")
-    val currentUserCollections: List<Any?>?,
+    //@SerialName("current_user_collections")
+    //val currentUserCollections: List<Any?>?,
     @SerialName("sponsorship")
     val sponsorship: Sponsorship?,
     @SerialName("topic_submissions")
@@ -50,8 +50,8 @@ data class PhotoDetailDto(
     val altDescription: String?,
     @SerialName("short_description")
     val shortDescription: String?,
-    @SerialName("seo_meta_description")
-    val seoMetaDescription: Any?,
+    //@SerialName("seo_meta_description")
+    //val seoMetaDescription: Any?,
     @SerialName("links")
     val links: Links?,
     @SerialName("user")
@@ -70,8 +70,8 @@ data class PhotoDetailDto(
     val views: Int?,
     @SerialName("downloads")
     val downloads: Int?,
-    @SerialName("topics")
-    val topics: List<Any?>?
+    //@SerialName("topics")
+    //val topics: List<Any?>?
 ) {
     @Serializable
     data class AlternativeSlugs(
@@ -98,7 +98,7 @@ data class PhotoDetailDto(
     @Serializable
     data class Urls(
         @SerialName("raw")
-        val raw: String?,
+        val raw: String,
         @SerialName("full")
         val full: String?,
         @SerialName("regular")
@@ -113,8 +113,8 @@ data class PhotoDetailDto(
 
     @Serializable
     data class Sponsorship(
-        @SerialName("impression_urls")
-        val impressionUrls: List<Any?>?,
+        //@SerialName("impression_urls")
+        //val impressionUrls: List<Any?>?,
         @SerialName("tagline")
         val tagline: String?,
         @SerialName("tagline_url")
@@ -129,21 +129,21 @@ data class PhotoDetailDto(
             @SerialName("updated_at")
             val updatedAt: String?,
             @SerialName("username")
-            val username: String?,
+            val username: String,
             @SerialName("name")
             val name: String?,
             @SerialName("first_name")
             val firstName: String?,
-            @SerialName("last_name")
-            val lastName: Any?,
-            @SerialName("twitter_username")
-            val twitterUsername: Any?,
+            //@SerialName("last_name")
+            //val lastName: Any?,
+            //@SerialName("twitter_username")
+            //val twitterUsername: Any?,
             @SerialName("portfolio_url")
             val portfolioUrl: String?,
             @SerialName("bio")
             val bio: String?,
-            @SerialName("location")
-            val location: Any?,
+            //@SerialName("location")
+            //val location: Any?,
             @SerialName("links")
             val links: Links?,
             @SerialName("profile_image")
@@ -201,10 +201,10 @@ data class PhotoDetailDto(
                 val instagramUsername: String?,
                 @SerialName("portfolio_url")
                 val portfolioUrl: String?,
-                @SerialName("twitter_username")
-                val twitterUsername: Any?,
-                @SerialName("paypal_email")
-                val paypalEmail: Any?
+                //@SerialName("twitter_username")
+                //val twitterUsername: Any?,
+                //@SerialName("paypal_email")
+                //val paypalEmail: Any?
             )
         }
     }
@@ -221,7 +221,7 @@ data class PhotoDetailDto(
         @SerialName("download")
         val download: String?,
         @SerialName("download_location")
-        val downloadLocation: String?
+        val downloadLocation: String
     )
 
     @Serializable
@@ -237,19 +237,19 @@ data class PhotoDetailDto(
         @SerialName("first_name")
         val firstName: String?,
         @SerialName("last_name")
-        val lastName: Any?,
-        @SerialName("twitter_username")
-        val twitterUsername: Any?,
+        val lastName: String?,
+        //@SerialName("twitter_username")
+        //val twitterUsername: Any?,
         @SerialName("portfolio_url")
         val portfolioUrl: String?,
         @SerialName("bio")
         val bio: String?,
         @SerialName("location")
-        val location: Any?,
+        val location: String?,
         @SerialName("links")
         val links: Links?,
         @SerialName("profile_image")
-        val profileImage: ProfileImage?,
+        val profileImage: ProfileImage,
         @SerialName("instagram_username")
         val instagramUsername: String?,
         @SerialName("total_collections")
@@ -290,11 +290,11 @@ data class PhotoDetailDto(
         @Serializable
         data class ProfileImage(
             @SerialName("small")
-            val small: String?,
+            val small: String,
             @SerialName("medium")
-            val medium: String?,
+            val medium: String,
             @SerialName("large")
-            val large: String?
+            val large: String
         )
 
         @Serializable
@@ -303,10 +303,10 @@ data class PhotoDetailDto(
             val instagramUsername: String?,
             @SerialName("portfolio_url")
             val portfolioUrl: String?,
-            @SerialName("twitter_username")
-            val twitterUsername: Any?,
-            @SerialName("paypal_email")
-            val paypalEmail: Any?
+            //@SerialName("twitter_username")
+            //val twitterUsername: Any?,
+            //@SerialName("paypal_email")
+            //val paypalEmail: Any?
         )
     }
 
@@ -333,20 +333,12 @@ data class PhotoDetailDto(
         @SerialName("name")
         val name: String?,
         @SerialName("city")
-        val city: Any?,
+        val city: String?,
         @SerialName("country")
-        val country: Any?,
-        @SerialName("position")
-        val position: Position?
-    ) {
-        @Serializable
-        data class Position(
-            @SerialName("latitude")
-            val latitude: Any?,
-            @SerialName("longitude")
-            val longitude: Any?
-        )
-    }
+        val country: String?,
+        //@SerialName("position")
+        //val position: Position?
+    )
 
     @Serializable
     data class Meta(
