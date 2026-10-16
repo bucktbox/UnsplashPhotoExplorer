@@ -13,7 +13,7 @@ data class Photo(
     // 사진 색깔 (로딩 배경)
     // 이 프로젝트에서는 blur hash 대신 이걸 사용
     val color: String?,
-    // 사진 다운로드용 url -> urls.regular
+    // 화면에 띄우는 이미지 url -> urls.regular
     // https://images.unsplash.com/photo-1791395668835-9696dbfd2d95?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
     val imageUrl: String,
     // 사진 저자

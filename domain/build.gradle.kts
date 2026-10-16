@@ -7,4 +7,5 @@ dependencies {
     api(projects.component)
     api(libs.javax.inject)
     api(libs.kotlinx.coroutines.core)
+    api(libs.androidx.paging.common)
 }
