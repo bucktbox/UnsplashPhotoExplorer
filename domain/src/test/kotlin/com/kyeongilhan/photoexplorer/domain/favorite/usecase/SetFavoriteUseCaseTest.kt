@@ -16,6 +16,7 @@ class SetFavoriteUseCaseTest {
         mockk(relaxUnitFun = true)
     private lateinit var useCase: SetFavoriteUseCase
     private val photo = createPhoto("a")
+
     @Before
     fun setUp() {
         useCase = SetFavoriteUseCase(
@@ -24,6 +25,7 @@ class SetFavoriteUseCaseTest {
             dispatcher = Dispatchers.Unconfined,
         )
     }
+
     @Test
     fun testFavoriteTrueUseCase() = runTest {
         // 사진 좋아요 누르면 동작 하는 순서 테스트
@@ -33,6 +35,7 @@ class SetFavoriteUseCaseTest {
             favoriteImageRepository.saveFavoriteImage("a")
         }
     }
+
     @Test
     fun testFavoriteFalseUseCase() = runTest {
         // 사진 좋아요 취소하면 동작 하는 순서 테스트

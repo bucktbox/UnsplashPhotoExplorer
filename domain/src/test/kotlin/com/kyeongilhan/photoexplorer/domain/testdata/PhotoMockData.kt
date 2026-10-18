@@ -3,6 +3,7 @@ package com.kyeongilhan.photoexplorer.domain.testdata
 import com.kyeongilhan.photoexplorer.domain.photo.model.Author
 import com.kyeongilhan.photoexplorer.domain.photo.model.Photo
 
+// 테스트용 photo data (mockK 사용)
 fun createPhoto(id: String = "a", width: Int = 300, height: Int = 200): Photo = Photo(
     id = id,
     width = width,

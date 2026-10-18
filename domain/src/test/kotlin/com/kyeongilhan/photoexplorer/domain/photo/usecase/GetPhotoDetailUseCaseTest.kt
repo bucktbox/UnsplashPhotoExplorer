@@ -18,6 +18,7 @@ class GetPhotoDetailUseCaseTest {
     private val favoriteRepository: FavoriteRepository = mockk()
     private lateinit var useCase: GetPhotoDetailUseCase
     private val params = GetPhotoDetailUseCase.Params(photoId = "a")
+
     @Before
     fun setUp() {
         useCase = GetPhotoDetailUseCase(
@@ -26,6 +27,7 @@ class GetPhotoDetailUseCaseTest {
             dispatcher = Dispatchers.Unconfined,
         )
     }
+
     @Test
     fun testGetPhotoDetailThrowsNetworkException() = runTest {
         coEvery { photoRepository.getPhotoDetail("a") } throws
