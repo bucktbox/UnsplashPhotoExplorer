@@ -12,3 +12,6 @@ sealed class DomainException(
     class NotFound(cause: Throwable? = null) : DomainException("Not found", cause)
     class Unknown(cause: Throwable? = null) : DomainException("Unknown error", cause)
 }
+
+// exception 을 domain exception 으로 변환하는 함수
+fun Throwable.toDomainException(): DomainException = this as? DomainException ?: DomainException.Unknown(this)
