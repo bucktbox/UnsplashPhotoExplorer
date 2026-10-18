@@ -1,0 +1,239 @@
+{
+    "id": "j9Vp6hAZDV8",
+    "alternative_slugs": {
+        "en": "woman-using-a-tablet-in-a-dairy-barn-j9Vp6hAZDV8",
+        "es": "mujer-usando-pastillas-en-el-establo-lechero-j9Vp6hAZDV8",
+        "ja": "\u916a\u8fb2\u5834\u3067\u30bf\u30d6\u30ec\u30c3\u30c8\u3092\u4f7f\u3046\u5973\u6027-j9Vp6hAZDV8",
+        "fr": "femme-utilisant-un-comprime-dans-une-grange-laitiere-j9Vp6hAZDV8",
+        "it": "donna-che-usa-una-compressa-nel-fienile-lattiero-caseario-j9Vp6hAZDV8",
+        "ko": "\ub099\ub18d\uc7a5\uc5d0\uc11c-\ud0dc\ube14\ub9bf\uc744-\uc0ac\uc6a9\ud558\ub294-\uc5ec\uc131-j9Vp6hAZDV8",
+        "de": "frau-benutzt-tablette-im-milchstall-j9Vp6hAZDV8",
+        "pt": "mulher-usando-comprimido-no-celeiro-de-laticinios-j9Vp6hAZDV8",
+        "id": "wanita-menggunakan-tablet-di-kandang-susu-j9Vp6hAZDV8"
+    },
+    "created_at": "2026-10-07T17:54:55Z",
+    "updated_at": "2026-10-15T13:58:07Z",
+    "promoted_at": null,
+    "width": 8192,
+    "height": 5464,
+    "color": "#260c0c",
+    "blur_hash": "LGCZR+ocR4%hMwR+NdxF00IVogV?",
+    "description": "Woman using a tablet in a dairy barn. Pennsylvania, USA.",
+    "breadcrumbs": [],
+    "urls": {
+        "raw": "https://images.unsplash.com/photo-1791395668835-9696dbfd2d95?ixid=M3wxMTAwNjU2fDB8MXxhbGx8fHx8fHx8fHwxNzkyMDczMjEyfA&ixlib=rb-4.1.0",
+        "full": "https://images.unsplash.com/photo-1791395668835-9696dbfd2d95?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTAwNjU2fDB8MXxhbGx8fHx8fHx8fHwxNzkyMDczMjEyfA&ixlib=rb-4.1.0&q=85",
+        "regular": "https://images.unsplash.com/photo-1791395668835-9696dbfd2d95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTAwNjU2fDB8MXxhbGx8fHx8fHx8fHwxNzkyMDczMjEyfA&ixlib=rb-4.1.0&q=80&w=1080",
+        "small": "https://images.unsplash.com/photo-1791395668835-9696dbfd2d95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTAwNjU2fDB8MXxhbGx8fHx8fHx8fHwxNzkyMDczMjEyfA&ixlib=rb-4.1.0&q=80&w=400",
+        "thumb": "https://images.unsplash.com/photo-1791395668835-9696dbfd2d95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTAwNjU2fDB8MXxhbGx8fHx8fHx8fHwxNzkyMDczMjEyfA&ixlib=rb-4.1.0&q=80&w=200",
+        "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1791395668835-9696dbfd2d95"
+    },
+    "likes": 1,
+    "liked_by_user": false,
+    "bookmarked": false,
+    "current_user_collections": [],
+    "sponsorship": {
+        "impression_urls": [],
+        "tagline": "Portraits of Modern Dairy",
+        "tagline_url": "https://www.usdairy.com/portraits",
+        "sponsor": {
+            "id": "Zvj5MXkpgn8",
+            "updated_at": "2026-10-14T23:06:35Z",
+            "username": "portraitsofmoderndairy",
+            "name": "Portraits of Modern Dairy",
+            "first_name": "Portraits of Modern Dairy",
+            "last_name": null,
+            "twitter_username": null,
+            "portfolio_url": "http://USDairy.com/portraits",
+            "bio": "Portraits of Modern Dairy offers a contemporary look at dairy farming through seven women across six U.S. farms. These images capture the innovation, expertise and leadership shaping U.S. dairy farming today.",
+            "location": null,
+            "links": {
+                "self": "https://api.unsplash.com/users/portraitsofmoderndairy",
+                "photos": "https://api.unsplash.com/users/portraitsofmoderndairy/photos",
+                "likes": "https://api.unsplash.com/users/portraitsofmoderndairy/likes",
+                "html": "https://unsplash.com/@portraitsofmoderndairy"
+            },
+            "profile_image": {
+                "small": "https://images.unsplash.com/profile-1789589982089-0981af9f2b42image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=32&h=32",
+                "medium": "https://images.unsplash.com/profile-1789589982089-0981af9f2b42image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64",
+                "large": "https://images.unsplash.com/profile-1789589982089-0981af9f2b42image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=128&h=128"
+            },
+            "instagram_username": "UndeniablyDairy",
+            "total_collections": 6,
+            "total_likes": 0,
+            "total_photos": 92,
+            "total_free_photos": 92,
+            "total_promoted_photos": 0,
+            "total_illustrations": 0,
+            "total_free_illustrations": 0,
+            "total_promoted_illustrations": 0,
+            "accepted_tos": true,
+            "for_hire": false,
+            "social": {
+                "instagram_username": "UndeniablyDairy",
+                "portfolio_url": "http://USDairy.com/portraits",
+                "twitter_username": null,
+                "paypal_email": null
+            }
+        }
+    },
+    "topic_submissions": {},
+    "asset_type": "photo",
+    "slug": "woman-using-a-tablet-in-a-dairy-barn-j9Vp6hAZDV8",
+    "alt_description": "Woman using a tablet in a dairy barn",
+    "short_description": "woman using tablet in dairy barn",
+    "seo_meta_description": null,
+    "links": {
+        "self": "https://api.unsplash.com/photos/woman-using-a-tablet-in-a-dairy-barn-j9Vp6hAZDV8",
+        "html": "https://unsplash.com/photos/woman-using-a-tablet-in-a-dairy-barn-j9Vp6hAZDV8",
+        "download": "https://unsplash.com/photos/j9Vp6hAZDV8/download?ixid=M3wxMTAwNjU2fDB8MXxhbGx8fHx8fHx8fHwxNzkyMDczMjEyfA",
+        "download_location": "https://api.unsplash.com/photos/j9Vp6hAZDV8/download?ixid=M3wxMTAwNjU2fDB8MXxhbGx8fHx8fHx8fHwxNzkyMDczMjEyfA"
+    },
+    "user": {
+        "id": "Zvj5MXkpgn8",
+        "updated_at": "2026-10-14T23:06:35Z",
+        "username": "portraitsofmoderndairy",
+        "name": "Portraits of Modern Dairy",
+        "first_name": "Portraits of Modern Dairy",
+        "last_name": null,
+        "twitter_username": null,
+        "portfolio_url": "http://USDairy.com/portraits",
+        "bio": "Portraits of Modern Dairy offers a contemporary look at dairy farming through seven women across six U.S. farms. These images capture the innovation, expertise and leadership shaping U.S. dairy farming today.",
+        "location": null,
+        "links": {
+            "self": "https://api.unsplash.com/users/portraitsofmoderndairy",
+            "photos": "https://api.unsplash.com/users/portraitsofmoderndairy/photos",
+            "likes": "https://api.unsplash.com/users/portraitsofmoderndairy/likes",
+            "html": "https://unsplash.com/@portraitsofmoderndairy"
+        },
+        "profile_image": {
+            "small": "https://images.unsplash.com/profile-1789589982089-0981af9f2b42image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=32&h=32",
+            "medium": "https://images.unsplash.com/profile-1789589982089-0981af9f2b42image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=64&h=64",
+            "large": "https://images.unsplash.com/profile-1789589982089-0981af9f2b42image?ixlib=rb-4.1.0&crop=faces&fit=crop&w=128&h=128"
+        },
+        "instagram_username": "UndeniablyDairy",
+        "total_collections": 6,
+        "total_likes": 0,
+        "total_photos": 92,
+        "total_free_photos": 92,
+        "total_promoted_photos": 0,
+        "total_illustrations": 0,
+        "total_free_illustrations": 0,
+        "total_promoted_illustrations": 0,
+        "accepted_tos": true,
+        "for_hire": false,
+        "social": {
+            "instagram_username": "UndeniablyDairy",
+            "portfolio_url": "http://USDairy.com/portraits",
+            "twitter_username": null,
+            "paypal_email": null
+        }
+    },
+    "exif": {
+        "make": "Canon",
+        "model": " EOS R5m2",
+        "name": "Canon, EOS R5m2",
+        "exposure_time": "1/200",
+        "aperture": "2.8",
+        "focal_length": "37.0",
+        "iso": 1000
+    },
+    "location": {
+        "name": "Pennsylvania, USA",
+        "city": null,
+        "country": null,
+        "position": {
+            "latitude": null,
+            "longitude": null
+        }
+    },
+    "meta": {
+        "index": true
+    },
+    "public_domain": false,
+    "tags": [
+        {
+            "type": "search",
+            "title": "woman"
+        },
+        {
+            "type": "search",
+            "title": "technology"
+        },
+        {
+            "type": "search",
+            "title": "blue"
+        },
+        {
+            "type": "search",
+            "title": "green"
+        },
+        {
+            "type": "search",
+            "title": "tech"
+        },
+        {
+            "type": "search",
+            "title": "animals"
+        },
+        {
+            "type": "search",
+            "title": "work"
+        },
+        {
+            "type": "search",
+            "title": "cow"
+        },
+        {
+            "type": "search",
+            "title": "farm"
+        },
+        {
+            "type": "search",
+            "title": "agriculture"
+        },
+        {
+            "type": "search",
+            "title": "working"
+        },
+        {
+            "type": "search",
+            "title": "milk"
+        },
+        {
+            "type": "search",
+            "title": "farming"
+        },
+        {
+            "type": "search",
+            "title": "farmer"
+        },
+        {
+            "type": "search",
+            "title": "cows"
+        },
+        {
+            "type": "search",
+            "title": "united states"
+        },
+        {
+            "type": "search",
+            "title": "barn"
+        },
+        {
+            "type": "search",
+            "title": "teal"
+        },
+        {
+            "type": "search",
+            "title": "farm animal"
+        },
+        {
+            "type": "search",
+            "title": "rural"
+        }
+    ],
+    "views": 73465,
+    "downloads": 209,
+    "topics": []
+}

@@ -4,7 +4,8 @@ plugins {
 
 dependencies {
     api(projects.dataResource)
-    implementation(projects.component)
-    implementation(libs.javax.inject)
-    implementation(libs.kotlinx.coroutines.core)
+    api(projects.component)
+    api(libs.javax.inject)
+    api(libs.kotlinx.coroutines.core)
+    api(libs.androidx.paging.common)
 }
