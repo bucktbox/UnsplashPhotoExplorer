@@ -1,6 +1,8 @@
 package com.kyeongilhan.photoexplorer.data.favorite.di
 
+import com.kyeongilhan.photoexplorer.data.favorite.repository.FavoriteImageRepositoryImpl
 import com.kyeongilhan.photoexplorer.data.favorite.repository.FavoriteRepositoryImpl
+import com.kyeongilhan.photoexplorer.domain.favorite.repository.FavoriteImageRepository
 import com.kyeongilhan.photoexplorer.domain.favorite.repository.FavoriteRepository
 import dagger.Binds
 import dagger.Module
@@ -12,4 +14,7 @@ import dagger.hilt.components.SingletonComponent
 internal interface FavoriteRepositoryModule {
     @Binds
     fun bindFavoriteRepository(impl: FavoriteRepositoryImpl): FavoriteRepository
+
+    @Binds
+    fun bindFavoriteImageRepository(impl: FavoriteImageRepositoryImpl): FavoriteImageRepository
 }

@@ -1,4 +1,4 @@
-package com.kyeongilhan.photoexplorer.local.favorite
+package com.kyeongilhan.photoexplorer.local.favorite.room
 
 import androidx.room.Dao
 import androidx.room.Insert

@@ -1,4 +1,4 @@
-package com.kyeongilhan.photoexplorer.local.favorite
+package com.kyeongilhan.photoexplorer.local.favorite.room
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

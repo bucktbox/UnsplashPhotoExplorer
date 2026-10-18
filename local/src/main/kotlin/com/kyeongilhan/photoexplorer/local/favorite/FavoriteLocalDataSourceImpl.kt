@@ -2,6 +2,9 @@ package com.kyeongilhan.photoexplorer.local.favorite
 
 import com.kyeongilhan.photoexplorer.data.favorite.datasource.FavoriteLocalDataSource
 import com.kyeongilhan.photoexplorer.data.favorite.entity.FavoritePhotoEntity
+import com.kyeongilhan.photoexplorer.local.favorite.mapper.toEntity
+import com.kyeongilhan.photoexplorer.local.favorite.mapper.toRoomEntity
+import com.kyeongilhan.photoexplorer.local.favorite.room.FavoritePhotoDao
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject

@@ -1,6 +1,7 @@
-package com.kyeongilhan.photoexplorer.local.favorite
+package com.kyeongilhan.photoexplorer.local.favorite.mapper
 import com.kyeongilhan.photoexplorer.data.favorite.entity.FavoritePhotoEntity
 import com.kyeongilhan.photoexplorer.data.photo.entity.PhotoEntity
+import com.kyeongilhan.photoexplorer.local.favorite.room.FavoritePhotoRoomEntity
 
 internal fun FavoritePhotoRoomEntity.toEntity(): FavoritePhotoEntity = FavoritePhotoEntity(
     photo = PhotoEntity(

@@ -7,6 +7,8 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import app.cash.turbine.test
 import com.google.common.truth.Truth.assertThat
 import com.kyeongilhan.photoexplorer.local.db.PhotoExplorerDatabase
+import com.kyeongilhan.photoexplorer.local.favorite.room.FavoritePhotoDao
+import com.kyeongilhan.photoexplorer.local.favorite.room.FavoritePhotoRoomEntity
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Before

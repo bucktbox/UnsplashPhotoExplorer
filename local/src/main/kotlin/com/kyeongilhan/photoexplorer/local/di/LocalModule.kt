@@ -2,13 +2,16 @@ package com.kyeongilhan.photoexplorer.local.di
 
 import android.content.Context
 import androidx.room.Room
+import androidx.work.WorkManager
 import com.kyeongilhan.photoexplorer.component.di.IoDispatcher
 import com.kyeongilhan.photoexplorer.data.favorite.datasource.FavoriteImageFileDataSource
+import com.kyeongilhan.photoexplorer.data.favorite.datasource.FavoriteImageWorkDataSource
 import com.kyeongilhan.photoexplorer.data.favorite.datasource.FavoriteLocalDataSource
 import com.kyeongilhan.photoexplorer.local.db.PhotoExplorerDatabase
 import com.kyeongilhan.photoexplorer.local.favorite.FavoriteImageFileDataSourceImpl
+import com.kyeongilhan.photoexplorer.local.favorite.FavoriteImageWorkDataSourceImpl
 import com.kyeongilhan.photoexplorer.local.favorite.FavoriteLocalDataSourceImpl
-import com.kyeongilhan.photoexplorer.local.favorite.FavoritePhotoDao
+import com.kyeongilhan.photoexplorer.local.favorite.room.FavoritePhotoDao
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -23,6 +26,9 @@ import javax.inject.Singleton
 internal interface LocalModule {
     @Binds
     fun bindFavoriteLocalDataSource(impl: FavoriteLocalDataSourceImpl): FavoriteLocalDataSource
+
+    @Binds
+    fun bindFavoriteImageWorkDataSource(impl: FavoriteImageWorkDataSourceImpl): FavoriteImageWorkDataSource
 
     companion object {
         @Provides
@@ -40,5 +46,10 @@ internal interface LocalModule {
             @IoDispatcher ioDispatcher: CoroutineDispatcher,
         ): FavoriteImageFileDataSource =
             FavoriteImageFileDataSourceImpl(context.filesDir, ioDispatcher)
+
+        // companion object 안
+        @Provides
+        @Singleton
+        fun provideWorkManager(@ApplicationContext context: Context): WorkManager = WorkManager.getInstance(context)
     }
 }

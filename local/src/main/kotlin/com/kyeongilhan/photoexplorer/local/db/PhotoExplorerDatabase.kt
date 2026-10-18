@@ -2,8 +2,8 @@ package com.kyeongilhan.photoexplorer.local.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.kyeongilhan.photoexplorer.local.favorite.FavoritePhotoDao
-import com.kyeongilhan.photoexplorer.local.favorite.FavoritePhotoRoomEntity
+import com.kyeongilhan.photoexplorer.local.favorite.room.FavoritePhotoDao
+import com.kyeongilhan.photoexplorer.local.favorite.room.FavoritePhotoRoomEntity
 
 @Database(
     entities = [FavoritePhotoRoomEntity::class],
