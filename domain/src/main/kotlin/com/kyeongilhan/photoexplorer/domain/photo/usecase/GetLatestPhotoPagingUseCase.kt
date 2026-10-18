@@ -1,7 +1,7 @@
 package com.kyeongilhan.photoexplorer.domain.photo.usecase
 
 import androidx.paging.PagingData
-import com.kyeongilhan.photoexplorer.component.di.IoDispatcher
+import com.kyeongilhan.photoexplorer.domain.di.IoDispatcher
 import com.kyeongilhan.photoexplorer.domain.base.BaseNoParamsFlowUseCase
 import com.kyeongilhan.photoexplorer.domain.photo.model.Photo
 import com.kyeongilhan.photoexplorer.domain.photo.repository.PhotoRepository

@@ -1,4 +1,4 @@
-package com.kyeongilhan.photoexplorer.component.di
+package com.kyeongilhan.photoexplorer.domain.di
 
 import javax.inject.Qualifier
 

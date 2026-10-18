@@ -20,7 +20,6 @@ dependencies {
     implementation(projects.data)
     implementation(projects.remote)
     implementation(projects.local)
-    implementation(projects.component)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.activity.compose)

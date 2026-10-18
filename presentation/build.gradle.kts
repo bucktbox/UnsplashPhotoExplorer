@@ -9,6 +9,5 @@ android {
 
 dependencies {
     implementation(projects.domain)
-    implementation(projects.component)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
 }
