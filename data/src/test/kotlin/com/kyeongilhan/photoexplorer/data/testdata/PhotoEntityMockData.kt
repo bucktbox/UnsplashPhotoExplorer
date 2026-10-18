@@ -21,4 +21,5 @@ fun createFavoriteEntity(id: String) = FavoritePhotoEntity(
     photo = createPhotoEntity(id),
     localImagePath = null,
     savedAt = 0,
+    isDownloadCalled = false
 )

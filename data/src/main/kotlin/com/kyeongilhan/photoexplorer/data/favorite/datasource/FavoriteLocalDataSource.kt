@@ -18,4 +18,13 @@ interface FavoriteLocalDataSource {
 
     // 좋아요 삭제
     suspend fun deleteFavorite(photoId: String)
+
+    // 좋아요 사진 단일 조회
+    suspend fun getFavorite(photoId: String): FavoritePhotoEntity?
+
+    // 다운로드 api 호출 성공 표시 (isDownloadCalled = true)
+    suspend fun markDownloadCalled(photoId: String)
+
+    // 파일 경로 업데이트 (이미지 다운로드 후)
+    suspend fun updateLocalImagePath(photoId: String, path: String): Boolean
 }

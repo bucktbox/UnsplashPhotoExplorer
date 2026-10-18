@@ -18,4 +18,5 @@ internal fun Photo.toFavoriteEntity(savedAt: Long): FavoritePhotoEntity = Favori
     photo = toEntity(),
     localImagePath = null,
     savedAt = savedAt,
+    isDownloadCalled = false
 )
