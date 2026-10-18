@@ -26,5 +26,5 @@ interface FavoriteLocalDataSource {
     suspend fun markDownloadCalled(photoId: String)
 
     // 파일 경로 업데이트 (이미지 다운로드 후)
-    suspend fun updateLocalImagePath(photoId: String, path: String): Boolean
+    suspend fun updateLocalImagePath(photoId: String, path: String)
 }
