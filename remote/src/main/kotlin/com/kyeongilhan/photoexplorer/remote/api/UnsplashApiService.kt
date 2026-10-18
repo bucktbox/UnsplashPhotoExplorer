@@ -1,4 +1,4 @@
-package com.kyeongilhan.photoexplorer.remote.photo.api
+package com.kyeongilhan.photoexplorer.remote.api
 
 import com.kyeongilhan.photoexplorer.data.photo.datasource.PhotoRemoteDataSource
 import com.kyeongilhan.photoexplorer.remote.photo.dto.PhotoDetailDto
