@@ -19,7 +19,7 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
 
       - name: Test
-        run: ./gradlew assembleDebug lintDebug :domain:test :data:test :remote:testDebugUnitTest
+        run: ./gradlew assembleDebug lintDebug :domain:test :data:test :remote:testDebugUnitTest :local:testDebugUnitTest
 
       - name: Upload test reports
         if: always()
