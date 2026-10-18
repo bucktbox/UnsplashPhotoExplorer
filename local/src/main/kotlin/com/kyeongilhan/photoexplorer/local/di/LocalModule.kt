@@ -2,8 +2,11 @@ package com.kyeongilhan.photoexplorer.local.di
 
 import android.content.Context
 import androidx.room.Room
+import com.kyeongilhan.photoexplorer.component.di.IoDispatcher
+import com.kyeongilhan.photoexplorer.data.favorite.datasource.FavoriteImageFileDataSource
 import com.kyeongilhan.photoexplorer.data.favorite.datasource.FavoriteLocalDataSource
 import com.kyeongilhan.photoexplorer.local.db.PhotoExplorerDatabase
+import com.kyeongilhan.photoexplorer.local.favorite.FavoriteImageFileDataSourceImpl
 import com.kyeongilhan.photoexplorer.local.favorite.FavoriteLocalDataSourceImpl
 import com.kyeongilhan.photoexplorer.local.favorite.FavoritePhotoDao
 import dagger.Binds
@@ -12,6 +15,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Singleton
 
 @Module
@@ -28,5 +32,13 @@ internal interface LocalModule {
 
         @Provides
         fun provideFavoritePhotoDao(database: PhotoExplorerDatabase): FavoritePhotoDao = database.favoritePhotoDao()
+
+        @Provides
+        @Singleton
+        fun provideFavoriteImageFileDataSource(
+            @ApplicationContext context: Context,
+            @IoDispatcher ioDispatcher: CoroutineDispatcher,
+        ): FavoriteImageFileDataSource =
+            FavoriteImageFileDataSourceImpl(context.filesDir, ioDispatcher)
     }
 }
