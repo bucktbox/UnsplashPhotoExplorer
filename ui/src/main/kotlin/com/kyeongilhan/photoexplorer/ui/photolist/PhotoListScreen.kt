@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
+import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.Badge
@@ -76,11 +78,13 @@ fun PhotoListScreen(
                     modifier = contentModifier
                 )
 
-            else -> LazyVerticalGrid(
-                columns = GridCells.Fixed(2),
+            else -> LazyVerticalStaggeredGrid(
+                // 비율대로 보여주는 그리드로 변경
+                columns = StaggeredGridCells.Adaptive(minSize = 160.dp),
                 modifier = contentModifier.fillMaxSize(),
                 contentPadding = PaddingValues(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
+                // verticalItemSpacing으로 변경 (위아래 spacing)
+                verticalItemSpacing = 8.dp,
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 items(count = photos.itemCount, key = photos.itemKey { it.photo.id }) { index ->
