@@ -3,7 +3,7 @@ package com.kyeongilhan.photoexplorer.local.di
 import android.content.Context
 import androidx.room.Room
 import androidx.work.WorkManager
-import com.kyeongilhan.photoexplorer.component.di.IoDispatcher
+import com.kyeongilhan.photoexplorer.domain.di.IoDispatcher
 import com.kyeongilhan.photoexplorer.data.favorite.datasource.FavoriteImageFileDataSource
 import com.kyeongilhan.photoexplorer.data.favorite.datasource.FavoriteImageWorkDataSource
 import com.kyeongilhan.photoexplorer.data.favorite.datasource.FavoriteLocalDataSource

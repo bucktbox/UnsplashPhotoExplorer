@@ -33,7 +33,6 @@ include(
     ":data",
     ":remote",
     ":local",
-    ":data-resource",
-    ":component",
+    ":data-resource"
 )
  

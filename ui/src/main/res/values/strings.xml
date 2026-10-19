@@ -1,0 +1,12 @@
+<resources>
+    <string name="photo_list_title">최신 사진</string>
+    <string name="favorites">좋아요 목록</string>
+    <string name="favorite_add">좋아요</string>
+    <string name="favorite_remove">좋아요 해제</string>
+    <string name="retry">다시 시도</string>
+    <string name="error_network">인터넷 연결을 확인해 주세요</string>
+    <string name="error_auth">인증에 실패하였습니다</string>
+    <string name="error_rate_limited">요청 한도를 넘었어요. 잠시 후 다시 시도해 주세요</string>
+    <string name="error_not_found">사진을 찾을 수 없어요</string>
+    <string name="error_unknown">문제가 생겼어요. 다시 시도해 주세요</string>
+</resources>

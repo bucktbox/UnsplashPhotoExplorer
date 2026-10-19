@@ -1,6 +1,6 @@
 package com.kyeongilhan.photoexplorer.domain.favorite.usecase
 
-import com.kyeongilhan.photoexplorer.component.di.IoDispatcher
+import com.kyeongilhan.photoexplorer.domain.di.IoDispatcher
 import com.kyeongilhan.photoexplorer.domain.base.BaseNoParamsFlowUseCase
 import com.kyeongilhan.photoexplorer.domain.favorite.model.FavoritePhoto
 import com.kyeongilhan.photoexplorer.domain.favorite.repository.FavoriteRepository

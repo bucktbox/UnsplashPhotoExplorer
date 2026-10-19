@@ -1,6 +1,6 @@
 package com.kyeongilhan.photoexplorer.remote.image
 
-import com.kyeongilhan.photoexplorer.component.di.IoDispatcher
+import com.kyeongilhan.photoexplorer.domain.di.IoDispatcher
 import com.kyeongilhan.photoexplorer.data.photo.datasource.ImageRemoteDataSource
 import com.kyeongilhan.photoexplorer.remote.di.ImageHttpClient
 import com.kyeongilhan.photoexplorer.remote.api.apiCallUnsplash
