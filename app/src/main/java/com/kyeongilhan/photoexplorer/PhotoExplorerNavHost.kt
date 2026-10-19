@@ -14,6 +14,7 @@ fun PhotoExplorerNavHost(navController: NavHostController = rememberNavControlle
         composable<PhotoListDestination> {
             PhotoListWrapper(
                 onPhotoClick = { },
+                onFavoritesClick = { }
             )
         }
     }
