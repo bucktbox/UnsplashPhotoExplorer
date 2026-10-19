@@ -50,7 +50,7 @@ fun Throwable.toErrorMessageRes(): Int = when (this) {
 }
 
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun ErrorViewPreview() {
     PhotoExplorerTheme {

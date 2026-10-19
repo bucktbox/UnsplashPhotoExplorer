@@ -6,6 +6,7 @@ import retrofit2.HttpException
 import java.io.IOException
 
 private const val HTTP_UNAUTHORIZED = 401
+private const val HTTP_FORBIDDEN = 403
 private const val HTTP_NOT_FOUND = 404
 
 // 기본 base api call
@@ -23,6 +24,8 @@ internal fun Throwable.toUnsplashDomainException(): DomainException = when (this
     is IOException -> DomainException.Network(this)
     is HttpException -> when (code()) {
         HTTP_UNAUTHORIZED -> DomainException.Auth(this)
+        // API Key 시간당 50번 제한 -> 403 error 줌
+        HTTP_FORBIDDEN -> DomainException.RateLimited(this)
         HTTP_NOT_FOUND -> DomainException.NotFound(this)
         else -> DomainException.Unknown(this)
     }
