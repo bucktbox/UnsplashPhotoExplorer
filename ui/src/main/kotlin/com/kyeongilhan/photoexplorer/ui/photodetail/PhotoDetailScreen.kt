@@ -22,7 +22,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
@@ -31,9 +31,9 @@ import androidx.compose.ui.unit.dp
 import com.kyeongilhan.photoexplorer.domain.photo.model.PhotoDetailResult
 import com.kyeongilhan.photoexplorer.presentation.photodetail.PhotoDetailState
 import com.kyeongilhan.photoexplorer.ui.R
+import com.kyeongilhan.photoexplorer.ui.common.CircularLoading
 import com.kyeongilhan.photoexplorer.ui.common.ErrorView
 import com.kyeongilhan.photoexplorer.ui.common.FavoriteIconButton
-import com.kyeongilhan.photoexplorer.ui.common.CircularLoading
 import com.kyeongilhan.photoexplorer.ui.common.PhotoImage
 import java.io.File
 
@@ -45,6 +45,10 @@ fun PhotoDetailScreen(
     onFavoriteClick: () -> Unit,
     onRetry: () -> Unit,
 ) {
+
+    val detail = state.detail
+    val error = state.error
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -54,15 +58,23 @@ fun PhotoDetailScreen(
                         Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.back))
                     }
                 },
+                actions = {
+                    // 좋아요 버튼
+                    // 상세를 받은 뒤에만 하트 표시 (로딩, 에러 중엔 숨김)
+                    if (detail != null) {
+                        FavoriteIconButton(
+                            isFavorite = detail.isFavorite,
+                            onClick = onFavoriteClick
+                        )
+                    }
+                }
             )
         },
     ) { innerPadding ->
         val contentModifier = Modifier.padding(innerPadding)
 
-        val detail = state.detail
-        val error = state.error
         when {
-            detail != null -> PhotoDetailContent(detail = detail, onFavoriteClick = onFavoriteClick, modifier = contentModifier)
+            detail != null -> PhotoDetailContent(detail = detail, modifier = contentModifier)
             error != null -> ErrorView(throwable = error, onRetry = onRetry, modifier = contentModifier)
             else -> CircularLoading(contentModifier)
         }
@@ -72,11 +84,13 @@ fun PhotoDetailScreen(
 @Composable
 private fun PhotoDetailContent(
     detail: PhotoDetailResult,
-    onFavoriteClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val photo = detail.photo
     val ratio = if (photo.height > 0) photo.width.toFloat() / photo.height else 1f
+    val imageModel = remember(photo.id) {
+        detail.localImagePath?.let { File(it) } ?: photo.imageUrl
+    }
 
     Column(
         modifier = modifier
@@ -87,7 +101,7 @@ private fun PhotoDetailContent(
         Box {
             PhotoImage(
                 // 저장된 파일이 있으면 파일, 없으면 서버 이미지
-                model = detail.localImagePath?.let { File(it) } ?: photo.imageUrl,
+                model = imageModel,
                 color = photo.color,
                 contentDescription = photo.description,
                 contentScale = ContentScale.Fit,
@@ -96,11 +110,11 @@ private fun PhotoDetailContent(
                     .clip(RoundedCornerShape(8.dp))
                     .aspectRatio(ratio),
             )
-            FavoriteIconButton(
+            /*FavoriteIconButton(
                 isFavorite = detail.isFavorite,
                 onClick = onFavoriteClick,
                 modifier = Modifier.align(Alignment.TopEnd),
-            )
+            )*/
         }
 
         Column(
