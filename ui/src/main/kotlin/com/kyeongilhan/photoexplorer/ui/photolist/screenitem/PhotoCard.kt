@@ -26,7 +26,7 @@ fun PhotoCard(
 ) {
     val photo = item.photo
     // 이미지의 비율 계산
-    val ratio = if (photo.height > 0) photo.width.toFloat() / photo.height else 1f
+    //val ratio = if (photo.height > 0) photo.width.toFloat() / photo.height else 1f
 
     Box(
         modifier = modifier
@@ -40,7 +40,7 @@ fun PhotoCard(
             // 일단 정사각형 칸 (넘치는 부분은 잘림)
             modifier = Modifier
                 .fillMaxWidth()
-                .aspectRatio(ratio),
+                .aspectRatio(1f),
         )
         FavoriteIconButton(
             isFavorite = item.isFavorite,

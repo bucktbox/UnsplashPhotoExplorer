@@ -84,8 +84,8 @@ fun PhotoListScreen(
                 modifier = contentModifier.fillMaxSize(),
                 contentPadding = PaddingValues(8.dp),
                 // verticalItemSpacing으로 변경 (위아래 spacing)
-                verticalItemSpacing = 8.dp,
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalItemSpacing = 16.dp,
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
             ) {
                 items(count = photos.itemCount, key = photos.itemKey { it.photo.id }) { index ->
                     val item = photos[index] ?: return@items
