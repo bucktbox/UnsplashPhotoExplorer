@@ -12,7 +12,9 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.emitAll
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.fold
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import kotlin.coroutines.cancellation.CancellationException
@@ -35,8 +37,16 @@ class GetPhotoDetailUseCase @Inject constructor(
         } catch (e: CancellationException) {
             throw e
         } catch (e: Exception) {
-            emit(DataResource.Error(e))
-            return@flow
+            //emit(DataResource.Error(e))
+
+            // 서버 실패했으니 로컬 저장본으로 보여주자
+            val saved = favoriteRepository.observeFavorite(params.photoId).first()
+            if (saved == null) {
+                emit(DataResource.Error(e))
+                return@flow
+            }
+
+            PhotoDetail(saved.photo, null)
         }
 
         // photoDetail api 결과에 favorite (local에 저장된 좋아요 데이터) 와 결합하여 돌려준다

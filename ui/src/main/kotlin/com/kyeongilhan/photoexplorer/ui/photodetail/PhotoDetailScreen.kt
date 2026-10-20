@@ -19,6 +19,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -44,6 +46,7 @@ fun PhotoDetailScreen(
     onBackClick: () -> Unit,
     onFavoriteClick: () -> Unit,
     onRetry: () -> Unit,
+    snackBarHostState: SnackbarHostState
 ) {
 
     val detail = state.detail
@@ -70,6 +73,7 @@ fun PhotoDetailScreen(
                 }
             )
         },
+        snackbarHost = { SnackbarHost(snackBarHostState) }
     ) { innerPadding ->
         val contentModifier = Modifier.padding(innerPadding)
 
@@ -88,6 +92,7 @@ private fun PhotoDetailContent(
 ) {
     val photo = detail.photo
     val ratio = if (photo.height > 0) photo.width.toFloat() / photo.height else 1f
+    // 저장된거 있으면 그걸로 띄우고 없으면 imageUrl로 띄운다
     val imageModel = remember(photo.id) {
         detail.localImagePath?.let { File(it) } ?: photo.imageUrl
     }
