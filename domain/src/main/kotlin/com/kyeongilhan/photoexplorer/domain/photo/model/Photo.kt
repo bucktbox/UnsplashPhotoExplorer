@@ -25,7 +25,9 @@ data class Photo(
 
 // 작가 정보
 data class Author(
+    // 사용자 이름
     val name: String,
+    // 사용자 ID (@username 으로 표시)
     val username: String,
     val profileImageUrl: String?
 )
