@@ -1,5 +1,5 @@
 <resources>
-    <string name="photo_list_title">최신 사진</string>
+    <string name="photo_list_title">Unsplash 최신 사진</string>
     <string name="favorites">좋아요 목록</string>
     <string name="favorite_add">좋아요</string>
     <string name="favorite_remove">좋아요 해제</string>
@@ -11,4 +11,5 @@
     <string name="error_unknown">문제가 생겼어요. 다시 시도해 주세요</string>
     <string name="photo_detail">사진 상세보기</string>
     <string name="back">뒤로가기</string>
+    <string name="author_by">by %1$s</string>
 </resources>

@@ -3,11 +3,14 @@ package com.kyeongilhan.photoexplorer.ui.photodetail
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -21,6 +24,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -77,6 +81,7 @@ private fun PhotoDetailContent(
     Column(
         modifier = modifier
             .fillMaxSize()
+            .padding(8.dp)
             .verticalScroll(rememberScrollState()),
     ) {
         Box {
@@ -88,6 +93,7 @@ private fun PhotoDetailContent(
                 contentScale = ContentScale.Fit,
                 modifier = Modifier
                     .fillMaxWidth()
+                    .clip(RoundedCornerShape(8.dp))
                     .aspectRatio(ratio),
             )
             FavoriteIconButton(
@@ -101,7 +107,8 @@ private fun PhotoDetailContent(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Text(text = photo.author.name, style = MaterialTheme.typography.titleMedium)
+            AuthorDetailInfo(author = photo.author, modifier = Modifier)
+            Spacer(modifier = Modifier.width(8.dp))
             photo.description?.let { Text(text = it, style = MaterialTheme.typography.bodyLarge) }
         }
     }
