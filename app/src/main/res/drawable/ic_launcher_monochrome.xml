@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 테마 아이콘(Android 13+)용 한 가지 색 버전. 색은 시스템이 칠함 -->
+    <path android:fillColor="#FFFFFF" android:fillType="evenOdd" android:pathData="M35,37 H65 A6,6 0 0 1 71,43 V73 A6,6 0 0 1 65,79 H35 A6,6 0 0 1 29,73 V43 A6,6 0 0 1 35,37 Z M36,41 H64 A3,3 0 0 1 67,44 V64 A3,3 0 0 1 64,67 H36 A3,3 0 0 1 33,64 V44 A3,3 0 0 1 36,41 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M33,67 L45,52 L52,60 L56,55 L67,67 Z" />
+    <group android:translateX="59.80" android:translateY="59.63" android:scaleX="0.85" android:scaleY="0.85">
+        <path android:fillColor="#FFFFFF" android:pathData="M12,21.35l-1.45,-1.32C5.4,15.36 2,12.28 2,8.5 2,5.42 4.42,3 7.5,3c1.74,0 3.41,0.81 4.5,2.09C13.09,3.81 14.76,3 16.5,3 19.58,3 22,5.42 22,8.5c0,3.78 -3.4,6.86 -8.55,11.54L12,21.35z" />
+    </group>
+</vector>
