@@ -71,7 +71,7 @@ class PhotoDetailViewModel @Inject constructor(
                 isFavorite = !detail.isFavorite
             )
         ).collectDataResource(
-            onSuccess = { },
+            onSuccess = { _effect.send(PhotoDetailEffect.ShowSuccess(!detail.isFavorite))},
             onError = { _effect.send(PhotoDetailEffect.ShowError(it)) }
         )
     }

@@ -55,7 +55,7 @@ class PhotoListViewModel @Inject constructor(
         // 하트 표시는 Room 구독(observeFavoriteIds)으로 자동으로 바뀜. 실패만 알려 줌
         setFavorite(SetFavoriteUseCase.Params(photo = intent.photo, isFavorite = intent.isFavorite))
             .collectDataResource(
-                onSuccess = {},
+                onSuccess = { _effect.send(PhotoListEffect.ShowSuccess(isFavorite = intent.isFavorite))},
                 onError = { _effect.send(PhotoListEffect.ShowError(it)) },
             )
     }

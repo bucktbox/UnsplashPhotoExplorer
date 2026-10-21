@@ -14,5 +14,6 @@ sealed interface PhotoDetailIntent {
 }
 
 sealed interface PhotoDetailEffect {
+    data class ShowSuccess(val isFavorite: Boolean) : PhotoDetailEffect
     data class ShowError(val throwable: Throwable) : PhotoDetailEffect
 }

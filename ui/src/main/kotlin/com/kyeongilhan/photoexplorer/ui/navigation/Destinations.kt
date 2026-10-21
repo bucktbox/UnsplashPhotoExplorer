@@ -9,3 +9,6 @@ data object PhotoListDestination
 // 상세는 사진 id 하나만 넘김
 @Serializable
 data class PhotoDetailDestination(val photoId: String)
+
+@Serializable
+data object FavoritesDestination

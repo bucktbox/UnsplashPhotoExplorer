@@ -12,4 +12,7 @@
     <string name="photo_detail">사진 상세보기</string>
     <string name="back">뒤로가기</string>
     <string name="author_by">by %1$s</string>
+    <string name="favorites_empty">아직 좋아요 한 사진이 없어요</string>
+    <string name="favorite_removed">좋아요를 해제했어요</string>
+    <string name="favorite_added">좋아요를 등록했어요</string>
 </resources>
