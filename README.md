@@ -4,6 +4,8 @@ Unsplash API로 최신 사진을 보고, 좋아요한 사진은 기기에 저장
 
 [Releases](https://github.com/bucktbox/UnsplashPhotoExplorer/releases)에서 APK를 받아 설치하면 됩니다.
 
+정식 프로덕션 앱이 아니기 때문에 signingConfig와 productFlavor를 따로 설정하지 않았으며 데모 키로 빌드 되어 있습니다
+
 ## 실행 방법
 
 1. [Unsplash Developers](https://unsplash.com/developers)에서 앱을 만들고 Access Key 발급
@@ -15,7 +17,7 @@ UNSPLASH_ACCESS_KEY=발급받은키
 
 3. Android Studio에서 실행 (minSdk 26)
 
-- API 키는 시간당 요청 수 제한(50회)이 있어서 스크롤을 많이 하면 요청 한도 초과 화면이 나올 수 있습니다.
+- 데모 API 키는 시간당 요청 수 제한(50회)이 있어서 스크롤을 많이 하면 요청 한도 초과 화면이 나올 수 있습니다.
 
 ## 기능
 
