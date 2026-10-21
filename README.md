@@ -66,7 +66,8 @@ Kotlin, Coroutines/Flow, Jetpack Compose, Navigation, Hilt, Paging 3, Room, Work
 - Clean Architecture + Compose 구조 구현
 - PR 시 Test 코드가 통과해야만 가능하도록 CI 도입
 - 앱 기능
-  + 좋아요 저장: Room에 먼저 저장해서 하트는 바로 바뀌고, 이미지 저장은 WorkManager로 백그라운드에서 처리 (네트워크 있을 때만)
+  + 사진 리스트 : Paging 을 이용한 무한 스크롤 불러오기 가능
+  + 좋아요 저장 : Room에 먼저 저장해서 하트는 바로 바뀌고, 이미지 저장은 WorkManager로 백그라운드에서 처리 (네트워크 있을 때만)
   + Flow를 통해 좋아요가 해제 될 시 리스트에 바로 반영 될 수 있도록 함
   + Unsplash 가이드에 맞춰 사진 저장할 때 다운로드 API를 한 번만 호출
   + 서버 에러를 DomainException으로 바꿔서 동일하게 처리
