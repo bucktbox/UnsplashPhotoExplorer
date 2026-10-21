@@ -15,6 +15,8 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import com.kyeongilhan.photoexplorer.presentation.photolist.PhotoListEffect
 import com.kyeongilhan.photoexplorer.presentation.photolist.PhotoListIntent
 import com.kyeongilhan.photoexplorer.presentation.photolist.PhotoListViewModel
+import com.kyeongilhan.photoexplorer.ui.R
+import com.kyeongilhan.photoexplorer.ui.common.showShortSnackbar
 import com.kyeongilhan.photoexplorer.ui.common.toErrorMessageRes
 
 @Composable
@@ -35,7 +37,14 @@ fun PhotoListWrapper(
             viewModel.effect.collect { effect ->
                 when (effect) {
                     is PhotoListEffect.ShowError ->
-                        snackbarHostState.showSnackbar(context.getString(effect.throwable.toErrorMessageRes()))
+                        snackbarHostState.showShortSnackbar(context.getString(effect.throwable.toErrorMessageRes()))
+                    is PhotoListEffect.ShowSuccess -> {
+                        when(effect.isFavorite) {
+                            true -> snackbarHostState.showShortSnackbar(context.getString(R.string.favorite_added))
+                            false -> snackbarHostState.showShortSnackbar(context.getString(R.string.favorite_removed))
+                        }
+                    }
+
                 }
             }
         }

@@ -1,4 +1,4 @@
-package com.kyeongilhan.photoexplorer.ui.photodetail
+package com.kyeongilhan.photoexplorer.ui.photodetail.screenitem
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

@@ -61,7 +61,7 @@ fun PhotoListScreen(
                 },
             )
         },
-        snackbarHost = { SnackbarHost(snackbarHostState) },
+        snackbarHost = { SnackbarHost(snackbarHostState) }
     ) { innerPadding ->
         val refresh = photos.loadState.refresh
         val contentModifier = Modifier.padding(innerPadding)

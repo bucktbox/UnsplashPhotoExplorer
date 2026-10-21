@@ -14,6 +14,8 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.kyeongilhan.photoexplorer.presentation.photodetail.PhotoDetailEffect
 import com.kyeongilhan.photoexplorer.presentation.photodetail.PhotoDetailIntent
 import com.kyeongilhan.photoexplorer.presentation.photodetail.PhotoDetailViewModel
+import com.kyeongilhan.photoexplorer.ui.R
+import com.kyeongilhan.photoexplorer.ui.common.showShortSnackbar
 import com.kyeongilhan.photoexplorer.ui.common.toErrorMessageRes
 
 @Composable
@@ -31,7 +33,14 @@ fun PhotoDetailWrapper(
             viewModel.effect.collect { effect ->
                 when (effect) {
                     is PhotoDetailEffect.ShowError ->
-                        snackbarHostState.showSnackbar(context.getString(effect.throwable.toErrorMessageRes()))
+                        snackbarHostState.showShortSnackbar(context.getString(effect.throwable.toErrorMessageRes()))
+
+                    is PhotoDetailEffect.ShowSuccess -> {
+                        when(effect.isFavorite) {
+                            true -> snackbarHostState.showShortSnackbar(context.getString(R.string.favorite_added))
+                            false -> snackbarHostState.showShortSnackbar(context.getString(R.string.favorite_removed))
+                        }
+                    }
                 }
             }
         }

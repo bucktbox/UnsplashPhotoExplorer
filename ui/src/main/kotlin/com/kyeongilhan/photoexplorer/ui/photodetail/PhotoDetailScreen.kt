@@ -37,6 +37,7 @@ import com.kyeongilhan.photoexplorer.ui.common.CircularLoading
 import com.kyeongilhan.photoexplorer.ui.common.ErrorView
 import com.kyeongilhan.photoexplorer.ui.common.FavoriteIconButton
 import com.kyeongilhan.photoexplorer.ui.common.PhotoImage
+import com.kyeongilhan.photoexplorer.ui.photodetail.screenitem.AuthorDetailInfo
 import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -48,7 +49,6 @@ fun PhotoDetailScreen(
     onRetry: () -> Unit,
     snackBarHostState: SnackbarHostState
 ) {
-
     val detail = state.detail
     val error = state.error
 

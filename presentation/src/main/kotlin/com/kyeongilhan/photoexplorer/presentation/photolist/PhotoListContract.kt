@@ -21,5 +21,6 @@ sealed interface PhotoListIntent {
 
 // viewModel -> 화면 단일 이벤트
 sealed interface PhotoListEffect {
+    data class ShowSuccess(val isFavorite: Boolean) : PhotoListEffect
     data class ShowError(val throwable: Throwable) : PhotoListEffect
 }
