@@ -17,6 +17,7 @@ kotlin {
     }
 }
 
+// AGP 의 LibraryExtension 같은 타입을 씀
 dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
@@ -26,7 +27,9 @@ dependencies {
 gradlePlugin {
     plugins {
         register("jvmLibrary") {
+            // 밖에서 보는 이름 (toml에 정의 되어 있다)
             id = "explorer.jvm.library"
+            // 실제로는 이 클래스가 불린다
             implementationClass = "JvmLibraryConventionPlugin"
         }
         register("jvmHilt") {

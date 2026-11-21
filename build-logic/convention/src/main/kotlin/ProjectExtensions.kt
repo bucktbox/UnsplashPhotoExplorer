@@ -16,6 +16,7 @@ internal object BuildConfigValues {
     val JVM_TARGET = JvmTarget.JVM_17
 }
 
+// VersionCatalog에서 찾을 수 있도록 libs 선언
 internal val Project.libs: VersionCatalog
     get() = extensions.getByType<VersionCatalogsExtension>().named("libs")
 

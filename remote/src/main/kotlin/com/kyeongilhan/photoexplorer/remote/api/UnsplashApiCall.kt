@@ -13,6 +13,7 @@ private const val HTTP_NOT_FOUND = 404
 internal suspend fun <T> apiCallUnsplash(block: suspend () -> T): T = try {
     block()
 } catch (e: CancellationException) {
+    // 코루틴 취소는 걍 삼키면 안됨
     throw e
 } catch (e: Exception) {
     throw e.toUnsplashDomainException()

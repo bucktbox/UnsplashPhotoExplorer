@@ -23,8 +23,10 @@ internal class PhotoRepositoryImpl @Inject constructor(
         config = PagingConfig(
             pageSize = PhotoRemoteDataSource.MAX_PER_PAGE,
             initialLoadSize = PhotoRemoteDataSource.MAX_PER_PAGE,
+            // 전체 개수를 알 수 있는 api는 placeholder로 미리 깔아놀 수있다
             enablePlaceholders = false,
         ),
+        // 한번 쓰고 버리는 객체라 람다로 받음
         pagingSourceFactory = { LatestPhotoPagingSource(photoRemoteDataSource) },
     ).flow
 

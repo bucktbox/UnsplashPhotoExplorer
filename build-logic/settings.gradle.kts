@@ -12,4 +12,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "build-logic"
+// build-logic/convention 폴더 접근
 include(":convention")

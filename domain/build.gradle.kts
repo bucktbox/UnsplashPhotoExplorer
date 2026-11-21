@@ -1,4 +1,5 @@
 plugins {
+    // id("explorer.jvm.library") 하고 같다
     alias(libs.plugins.explorer.jvm.library)
 }
 

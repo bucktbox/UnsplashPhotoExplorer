@@ -9,7 +9,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
         pluginManager.apply("com.android.library")
         pluginManager.apply("org.jetbrains.kotlin.android")
 
-        extensions.configure<LibraryExtension> {
+        extensions.configure<LibraryExtension> {    // 모듈의 android {   } 와 같다
             compileSdk = BuildConfigValues.COMPILE_SDK
             defaultConfig {
                 minSdk = BuildConfigValues.MIN_SDK

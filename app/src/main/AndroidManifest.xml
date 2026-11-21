@@ -33,6 +33,7 @@
             android:authorities="${applicationId}.androidx-startup"
             android:exported="false"
             tools:node="merge">
+        <!--  자동 초기화 안쓰면 기본 팩토리러 먼저 초기화돼서 hilt가 안먹음  -->
             <meta-data
                 android:name="androidx.work.WorkManagerInitializer"
                 android:value="androidx.startup"

@@ -21,4 +21,12 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
+
+    // Compose UI 테스트 (기기 없이 JVM 에서 Robolectric 으로 실행)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.androidx.test.core)
+    testImplementation(libs.androidx.test.ext.junit)
+    testImplementation(libs.androidx.compose.ui.test.junit4)
+    // createComposeRule 이 띄우는 빈 Activity 의 매니페스트
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
 }

@@ -27,6 +27,7 @@ fun PhotoExplorerNavHost(navController: NavHostController = rememberNavControlle
                     }
                 },
                 // 두번 따닥 누르면 버그 발생 수정 (실기테스트 버그)
+                // 화면이 완전히 떠 있는 상태일때만 클릭을 처리하게 하려고 dropUnlessResumed 넣음
                 onFavoritesClick = dropUnlessResumed  {
                     navController.navigate(FavoritesDestination)
                 },
